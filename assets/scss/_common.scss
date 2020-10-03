@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+   overflow-y: scroll;
+   color: $color-gray;
+   font-family: $font-main;
+   font-size: $font-size;
+ }
+ 
+ h1 {
+   letter-spacing: 0.08em;
+   font-family: $font-header;
+   font-weight: 300;
+   line-height: 1.2em;
+   font-size: 3.75em;
+
+    @include lg{
+        font-size: 2.5em;
+    }
+    @include md{
+        font-size: 1.875em;
+    }
+   
+}
+ h3 {
+  letter-spacing: 0.05em;
+  color: #637588;
+  font-size: 1.125rem;
+ }
+ p {
+  color: #637588;
+}
+ 
+a {
+    text-decoration: none;
+    color: $color-light;
+  }
+ .btn {
+   display: block;
+   padding: 18px 0;
+   -webkit-transition: background-color 0.5s, border-color 0.5s;
+   -o-transition: background-color 0.5s, border-color 0.5s;
+   transition: background-color 0.5s, border-color 0.5s;
+   text-align: center;
+   letter-spacing: 0.1em;
+   border-width: 2px;
+   border-style: solid;
+   font-size: 1.125rem;
+   border-color: $color-light;
+   background-color: rgba(255, 255, 255, 0.1);
+   width: 246px;
+
+   &:hover, 
+   &:focus{
+    background-color: $color-accent;
+  }
+ }
+ 
+ 
+ .btn-skills {
+    min-width: 350px;
+    border-color: $color-primary;
+    background-color: rgba($color-primary, 0.8);
+    padding: 18px 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 1.125rem;
+    -webkit-transition: background-color 0.5s, border-color 0.5s;
+    -o-transition: background-color 0.5s, border-color 0.5s;
+    transition: background-color 0.5s, border-color 0.5s;
+   
+    &:hover, 
+    &:focus{
+        background-color: $color-accent;
+    }
+
+    @include sm {
+        width: 100%;
+        min-width: auto;
+        min-width: 256px;
+    }  
+}
+ 
+  

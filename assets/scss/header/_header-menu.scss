@@ -1,0 +1,22 @@
+.header-menu {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @include md {
+      background-color: rgba(68, 89, 110, 0.3);
+    }
+
+    &__wrapper {
+      @extend %wrapper;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+  }
+  
+  

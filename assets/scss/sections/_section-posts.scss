@@ -1,0 +1,161 @@
+.posts{
+    padding: 100px 0;
+    @include lg{
+        padding: 80px 0;
+    }
+    @include md{
+        padding: 60px 0;
+    }
+
+    &__wrapper{
+    @extend %wrapper;
+    }
+
+    &__title{
+    @extend %title;
+    margin-top: 0;
+        @include lg{
+            margin-bottom: 42px;
+            font-size: 2rem;
+        }
+        @include md{
+            margin-bottom: 36px;
+            font-size: 1.5rem;
+        }
+        @include sm{
+            margin-bottom: 36px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__all{
+    display: grid;
+    grid-template-areas:
+        "p1 p1 p2 p3"
+        "p4 p5 p6 p6";
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: $gap;
+    grid-gap: $gap;
+
+    @include lg{
+    grid-template-areas:
+        "p1 p1 p2"
+        "p3 p4 p4"
+        "p5 p5 p6";
+    grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+    grid-template-areas:
+        "p1 p2"
+        "p3 p4"
+        "p5 p6";
+    grid-template-columns: 1fr 1fr;
+    }
+    @include sm{
+    grid-template-areas:
+        "p1"
+        "p2"
+        "p3"
+        "p4"
+        "p5"
+        "p6";
+    grid-template-columns: 1fr;
+    }
+  }
+    &-button{
+    @extend %button;
+    }
+   
+}
+
+
+
+.post-item{
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    background-color: #f2f2f2;
+   
+
+    &:hover{
+        background-color: #d8d8d8;
+    }
+    &:hover &__image{
+        transform: scale(1.1);
+    }
+
+    &__link{
+    display: grid;
+    overflow: hidden;
+    height: 100%;
+    grid-template-rows: 300px 1fr;
+    }
+    &__img-block{
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #2d3651;
+    }
+  
+
+    &__image{
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.5s;
+    -o-transition: transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+    @include lg {
+        width: 100%;
+    }
+
+}
+    &__caption{
+    display: grid;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    padding: 20px;
+    }
+    &__title{
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    }
+    &__text{
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    text-align: center;
+    }
+
+    &:nth-of-type(1){
+        grid-area: p1;
+    }
+    &:nth-of-type(2){
+        grid-area: p2;
+    }
+    &:nth-of-type(3){
+        grid-area: p3;
+    }
+    &:nth-of-type(4){
+        grid-area: p4;
+    }
+    &:nth-of-type(5){
+        grid-area: p5;
+    }
+    &:nth-of-type(6){
+        grid-area: p6;
+    }
+}
