@@ -564,7 +564,6 @@ a {
 }
 
 .header {
-  background-image: url(/assets/img/img-header.png);
   position: relative;
   display: grid;
   -ms-flex-line-pack: center;
@@ -1019,6 +1018,55 @@ a {
   font-size: 1.125rem;
 }
 
+.form-item__input:focus {
+  outline: none;
+}
+
+.form-item__input::-webkit-input-placeholder {
+  color: #637588;
+  z-index: 10;
+}
+
+.form-item__input::-moz-placeholder {
+  color: #637588;
+  z-index: 10;
+}
+
+.form-item__input:-ms-input-placeholder {
+  color: #637588;
+  z-index: 10;
+}
+
+.form-item__input::-ms-input-placeholder {
+  color: #637588;
+  z-index: 10;
+}
+
+.form-item__input::placeholder {
+  color: #637588;
+  z-index: 10;
+}
+
+.form-item__input:hover::-webkit-input-placeholder, .form-item__input:focus::-webkit-input-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover::-moz-placeholder, .form-item__input:focus::-moz-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover:-ms-input-placeholder, .form-item__input:focus:-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover::-ms-input-placeholder, .form-item__input:focus::-ms-input-placeholder {
+  color: #8c9bab;
+}
+
+.form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
+  color: #8c9bab;
+}
+
 .form-item__input:hover, .form-item__input:focus {
   border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
@@ -1045,6 +1093,9 @@ a {
   opacity: 1.5;
 }
 
+/*input[type="text"]::placeholder { 
+    color: red;
+ }*/
 .posts {
   padding: 100px 0;
 }
